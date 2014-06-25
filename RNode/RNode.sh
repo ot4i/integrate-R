@@ -1,0 +1,2 @@
+#!/bin/sh
+export MQSI_SHOW_ANALYTICS_CATEGORY=1

@@ -1,0 +1,2 @@
+@echo off
+set MQSI_SHOW_ANALYTICS_CATEGORY=1
