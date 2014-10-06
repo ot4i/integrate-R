@@ -473,9 +473,9 @@ public class RNode extends MbNode implements MbNodeInterface {
 				String xpathExpression = (String) parameterTable.getValue("xpathExpression");
 				
 				// Validate that it has a name and XPath expression.
-				if (name.isEmpty()) {
+				if (name == null || name.isEmpty()) {
 					throw new RNodeException(this, methodName, 7814, "Parameter has an empty name", getName());
-				} else if (xpathExpression.isEmpty()) {
+				} else if (xpathExpression == null || xpathExpression.isEmpty()) {
 					throw new RNodeException(this, methodName, 7816, "Parameter has an empty XPath expression", getName());
 				}
 				
@@ -491,7 +491,7 @@ public class RNode extends MbNode implements MbNodeInterface {
 					}
 				
 				// Else, if it's a column in a data frame column add it.
-				} else if (!dataFrame.isEmpty()) {
+				} else if (dataFrame != null && !dataFrame.isEmpty()) {
 					RNodeDataFrame actualDataFrame = dataFrames.get(dataFrame);
 					if (actualDataFrame != null) {
 						actualDataFrame.addColumn(name, type, direction, xpathExpression, xpath);
