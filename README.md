@@ -14,15 +14,15 @@ Note that the R runtime and Rserve server may not be available for the system on
 
 ##Setup
 1. Install the R node runtime component into IBM Integration Bus. 
-  * You can download a prebuilt binary from the [RNode](RNode) project. The file is named *RNodeRuntime-<version>.par*.
+  * You can download a prebuilt binary from the [RNode](RNode) project. The file is named *RNodeRuntime-\<version\>.par*.
   * Alternatively, you can download and build the source in the [RNodeRuntime](RNodeRuntime) project.
-  * Copy the *RNodeRuntime-<version>.par* file into the IBM Integration Bus installation. The file should be copied into *<install root>\server\lil*.
+  * Copy the *RNodeRuntime-\<version\>.par* file into the IBM Integration Bus installation. The file should be copied into *\<install root\>\server\lil*.
   * Once the file has been copied, then you must restart all integration servers that you will be deploying the R node to.
 
 2. Install the R node toolkit component into IBM Integration Bus.
-  * You can download a prebuilt archive from the [RNode](RNode) project. The file is named *RNodeToolkit-<version>.zip*.
+  * You can download a prebuilt archive from the [RNode](RNode) project. The file is named *RNodeToolkit-\<version\>.zip*.
   * Alternatively, you can download and build the source in the [RNodeToolkit](RNodeToolkit) project.
-  * Extract the *RNodeToolkit-<version>.zip* file into the IBM Integration Bus installation. The file should be extracted into *<install root>\tools*, and the extract process should create a file named *<install root>\tools\plugins\RNodeToolkit-<version>.jar*.
+  * Extract the *RNodeToolkit-\<version\>.zip* file into the IBM Integration Bus installation. The file should be extracted into *\<install root\>\tools*, and the extract process should create a file named *\<install root\>\tools\plugins\RNodeToolkit-\<version\>.jar*.
   * Once the file has been extracted, then you must restart the Integration Toolkit.
 
 3. Verify the installation. Once the Integration Toolkit has been restarted, the R node should be available from the palette in the message flow editor. The R node is displayed under the Analytics category.
