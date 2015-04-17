@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:palette="http://www.ibm.com/wbi/2005/eflow_palette" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility">
+  <palette:CategoryCmp xmi:id="ibm_analytics" iconOpenName="platform:/plugin/RNodeToolkit/icons/full/obj16/analytics_obj.gif" iconClosedName="platform:/plugin/RNodeToolkit/icons/full/obj16/analytics_closed_obj.gif">
+    <categoryLabel xmi:type="utility:TranslatableString" key="category_analytics_name" bundleName="palette" pluginId="RNodeToolkit"/>
+    <cmpGroups xmi:type="palette:GroupCmp">
+      <cmpEntries xmi:type="palette:ToolEntry" xmi:id="ComIbmR" icon16Name="platform:/plugin/RNodeToolkit/icons/full/clcl16/r.gif" icon32Name="platform:/plugin/RNodeToolkit/icons/full/obj30/r.gif" toolClassName="com.ibm.etools.mft.flow.editor.MFTNodeCreationTool" toolClassPluginId="com.ibm.etools.mft.flow" nodeURI="ComIbmR.msgnode">
+        <entryLabel xmi:type="utility:TranslatableString" key="entry.ComIbmR" bundleName="palette" pluginId="RNodeToolkit"/>
+        <entryShortDescription xmi:type="utility:TranslatableString" key="tooltip.ComIbmR" bundleName="palette" pluginId="RNodeToolkit"/>
+      </cmpEntries>
+    </cmpGroups>
+  </palette:CategoryCmp>
+</xmi:XMI>
+  

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="ComIbmR.msgnode" nsPrefix="ComIbmR.msgnode">
+  <eClassifiers xmi:type="ecore:EEnum">
+    <eLiterals xmi:id="parameterType.R_LOGICAL" name="R_LOGICAL"/>
+    <eLiterals xmi:id="parameterType.R_INTEGER" name="R_INTEGER" value="1"/>
+    <eLiterals xmi:id="parameterType.R_DOUBLE" name="R_DOUBLE" value="2"/>
+    <eLiterals xmi:id="parameterType.R_CHARACTER" name="R_CHARACTER" value="3"/>
+    <eLiterals xmi:id="parameterType.R_DATA_FRAME" name="R_DATA_FRAME" value="4"/>
+  </eClassifiers>
+  <eClassifiers xmi:type="ecore:EEnum">
+    <eLiterals xmi:id="parameterDirection.IN" name="IN"/>
+    <eLiterals xmi:id="parameterDirection.INOUT" name="INOUT" value="1"/>
+    <eLiterals xmi:id="parameterDirection.OUT" name="OUT" value="2"/>
+  </eClassifiers>
+  <eClassifiers xmi:type="eflow:PropertySet" name="NamespacePrefixMap">
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.nsPrefix" name="nsPrefix">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.namespace" name="namespace" lowerBound="1">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <propertyOrganizer>
+      <propertyDescriptor propertyEditor="com.ibm.etools.mft.flow.properties.celleditors.StringCellPropertyEditor" describedAttribute="Property.nsPrefix">
+        <propertyName xmi:type="utility:TranslatableString" key="Property.nsPrefix" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+        <propertyDescriptor propertyEditor="com.ibm.etools.mft.flow.properties.celleditors.StringCellPropertyEditor" describedAttribute="Property.namespace">
+          <propertyName xmi:type="utility:TranslatableString" key="Property.namespace" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+        </propertyDescriptor>
+      </propertyDescriptor>
+    </propertyOrganizer>
+  </eClassifiers>
+  <eClassifiers xmi:type="eflow:PropertySet" name="MonitorEventsRow">
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.eventEnabled" name="eventEnabled" lowerBound="1" defaultValueLiteral="true">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.eventSourceDescription" name="eventSourceDescription" lowerBound="1">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.eventSourceName" name="eventSourceName" lowerBound="1">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.eventIdentity" name="eventIdentity" lowerBound="1">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.eventFilter" name="eventFilter" lowerBound="1" defaultValueLiteral="true()">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="Property.eventXMLDoc" name="eventXMLDoc" lowerBound="1" containment="true">
+      <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EClassifier"/>
+    </eStructuralFeatures>
+    <propertyOrganizer>
+      <propertyDescriptor xmi:type="eflow:ColumnDescriptor" propertyEditor="com.ibm.etools.mft.ibmnodes.editors.monitoring.MonitorEventEnabledCellPropertyEditor" describedAttribute="Property.eventEnabled" columnWidth="80">
+        <propertyName xmi:type="utility:TranslatableString" key="Property.eventEnabled" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+        <propertyDescriptor propertyEditor="com.ibm.etools.mft.ibmnodes.editors.monitoring.MonitorEventSourceDescriptionCellPropertyEditor" readOnly="true" describedAttribute="Property.eventSourceDescription">
+          <propertyName xmi:type="utility:TranslatableString" key="Property.eventSourceDescription" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+          <propertyDescriptor propertyEditor="com.ibm.etools.mft.ibmnodes.editors.monitoring.MonitorEventSourceAddressCellPropertyEditor" readOnly="true" describedAttribute="Property.eventSourceName">
+            <propertyName xmi:type="utility:TranslatableString" key="Property.eventSourceName" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+            <propertyDescriptor propertyEditor="com.ibm.etools.mft.ibmnodes.editors.monitoring.MonitorEventIdentityCellPropertyEditor" readOnly="true" describedAttribute="Property.eventIdentity">
+              <propertyName xmi:type="utility:TranslatableString" key="Property.eventIdentity" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+              <propertyDescriptor propertyEditor="com.ibm.etools.mft.ibmnodes.editors.monitoring.MonitorEventDetailsCellPropertyEditor" readOnly="true" describedAttribute="Property.eventFilter">
+                <propertyName xmi:type="utility:TranslatableString" key="Property.eventFilter" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+                <propertyDescriptor compiler="com.ibm.etools.mft.ibmnodes.compilers.monitoring.MonitorEventDetailsColumnPropertyCompiler" readOnly="true" hidden="true" describedReference="Property.eventXMLDoc">
+                  <propertyName xmi:type="utility:TranslatableString" key="Property.eventXMLDoc" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+                </propertyDescriptor>
+              </propertyDescriptor>
+            </propertyDescriptor>
+          </propertyDescriptor>
+        </propertyDescriptor>
+      </propertyDescriptor>
+    </propertyOrganizer>
+  </eClassifiers>
+  <eClassifiers xmi:type="eflow:PropertySet" name="ParameterTableRow">
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.parameterDataFrame" name="parameterDataFrame">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.parameterName" name="parameterName" lowerBound="1">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.parameterType" name="parameterType" lowerBound="1" eType="//@eClassifiers.0" defaultValueLiteral="R_LOGICAL" unsettable="true"/>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.parameterDirection" name="parameterDirection" lowerBound="1" eType="//@eClassifiers.1" defaultValueLiteral="IN" unsettable="true"/>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.xpathExpression" name="xpathExpression" lowerBound="1">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <propertyOrganizer>
+      <propertyDescriptor xmi:type="eflow:ColumnDescriptor" propertyEditor="com.ibm.etools.mft.flow.properties.celleditors.StringCellPropertyEditor" readOnly="true" describedAttribute="Property.parameterDataFrame" columnWidth="150">
+        <propertyName xmi:type="utility:TranslatableString" key="Property.parameterDataFrame" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+        <propertyDescriptor xmi:type="eflow:ColumnDescriptor" propertyEditor="com.ibm.etools.mft.flow.properties.celleditors.StringCellPropertyEditor" readOnly="true" describedAttribute="Property.parameterName" columnWidth="150">
+          <propertyName xmi:type="utility:TranslatableString" key="Property.parameterName" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+          <propertyDescriptor xmi:type="eflow:ColumnDescriptor" propertyEditor="com.ibm.etools.mft.flow.properties.celleditors.EnumCellPropertyEditor" describedAttribute="Property.parameterType" columnWidth="150">
+            <propertyName xmi:type="utility:TranslatableString" key="Property.parameterType" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+            <propertyDescriptor xmi:type="eflow:ColumnDescriptor" propertyEditor="com.ibm.etools.mft.flow.properties.celleditors.EnumCellPropertyEditor" describedAttribute="Property.parameterDirection" columnWidth="100">
+              <propertyName xmi:type="utility:TranslatableString" key="Property.parameterDirection" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+              <propertyDescriptor xmi:type="eflow:ColumnDescriptor" propertyEditor="com.ibm.etools.mft.ibmnodes.editors.xpath.XPathCellPropertyEditor:Root,Body,Properties,LocalEnvironment,DestinationList,ExceptionList,Environment" describedAttribute="Property.xpathExpression" columnWidth="150">
+                <propertyName xmi:type="utility:TranslatableString" key="Property.xpathExpression" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+              </propertyDescriptor>
+            </propertyDescriptor>
+          </propertyDescriptor>
+        </propertyDescriptor>
+      </propertyDescriptor>
+    </propertyOrganizer>
+  </eClassifiers>
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" useDefaults="true">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.server" name="server" lowerBound="1">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.RDataFile" name="RDataFile">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.connectScript" name="connectScript">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.evaluateScript" name="evaluateScript" lowerBound="1">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.disconnectScript" name="disconnectScript">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="Property.parameterTable" name="parameterTable" upperBound="-1" eType="//ParameterTableRow" containment="true"/>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.maximumConnections" name="maximumConnections" defaultValueLiteral="10">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.minimumConnections" name="minimumConnections" defaultValueLiteral="1">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="Property.idleConnectionTimeout" name="idleConnectionTimeout" defaultValueLiteral="10">
+      <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="Property.nsMappingTable" name="nsMappingTable" upperBound="-1" eType="//NamespacePrefixMap" containment="true"/>
+    <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="Property.monitorEvents" name="monitorEvents" upperBound="-1" eType="//MonitorEventsRow" containment="true"/>
+    <translation xmi:type="utility:TranslatableString" key="ComIbmR" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/RNodeToolkit/icons/full/obj16/r.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/RNodeToolkit/icons/full/obj30/r.gif"/>
+    <composition>
+      <nodes xmi:type="eflow:FCMSource" xmi:id="InTerminal.in" location="100,20">
+        <translation xmi:type="utility:TranslatableString" key="InTerminal.in" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+      </nodes>
+      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.failure" location="200,40">
+        <translation xmi:type="utility:TranslatableString" key="OutTerminal.failure" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+      </nodes>
+      <nodes xmi:type="eflow:FCMSink" xmi:id="OutTerminal.out" location="300,60">
+        <translation xmi:type="utility:TranslatableString" key="OutTerminal.out" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+      </nodes>
+    </composition>
+    <propertyOrganizer>
+      <propertyDescriptor propertyEditor="com.ibm.etools.mft.flow.properties.StringPropertyEditor" configurable="true" describedAttribute="Property.server">
+        <propertyName xmi:type="utility:TranslatableString" key="Property.server" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+        <propertyDescriptor propertyEditor="com.ibm.etools.mft.flow.properties.StringPropertyEditor" describedAttribute="Property.RDataFile">
+          <propertyName xmi:type="utility:TranslatableString" key="Property.RDataFile" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+          <propertyDescriptor propertyEditor="com.ibm.etools.mft.flow.properties.StringPropertyEditor" describedAttribute="Property.connectScript">
+            <propertyName xmi:type="utility:TranslatableString" key="Property.connectScript" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+            <propertyDescriptor propertyEditor="com.ibm.etools.mft.flow.properties.StringPropertyEditor" describedAttribute="Property.evaluateScript">
+              <propertyName xmi:type="utility:TranslatableString" key="Property.evaluateScript" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+              <propertyDescriptor propertyEditor="com.ibm.etools.mft.flow.properties.StringPropertyEditor" describedAttribute="Property.disconnectScript">
+                <propertyName xmi:type="utility:TranslatableString" key="Property.disconnectScript" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+                <propertyDescriptor groupName="Group.variables" propertyEditor="RNodeToolkit.properties.DataFrameTableEditor" describedReference="Property.parameterTable">
+                  <propertyName xmi:type="utility:TranslatableString" key="Property.parameterTable" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+                  <propertyDescriptor groupName="Group.connectionPool" propertyEditor="com.ibm.etools.mft.flow.properties.IntegerPropertyEditor" configurable="true" describedAttribute="Property.maximumConnections">
+                    <propertyName xmi:type="utility:TranslatableString" key="Property.maximumConnections" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+                    <propertyDescriptor groupName="Group.connectionPool" propertyEditor="com.ibm.etools.mft.flow.properties.IntegerPropertyEditor" configurable="true" describedAttribute="Property.minimumConnections">
+                      <propertyName xmi:type="utility:TranslatableString" key="Property.minimumConnections" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+                      <propertyDescriptor groupName="Group.connectionPool" propertyEditor="com.ibm.etools.mft.flow.properties.LongPropertyEditor" configurable="true" describedAttribute="Property.idleConnectionTimeout">
+                        <propertyName xmi:type="utility:TranslatableString" key="Property.idleConnectionTimeout" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+                        <propertyDescriptor groupName="Group.monitoring" readOnly="true" hidden="true" describedReference="Property.nsMappingTable">
+                          <propertyName xmi:type="utility:TranslatableString" key="Property.nsMappingTable" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+                          <propertyDescriptor groupName="Group.monitoring" propertyEditor="com.ibm.etools.mft.ibmnodes.editors.monitoring.MonitoringEventsComplexPropertyEditor" describedReference="Property.monitorEvents">
+                            <propertyName xmi:type="utility:TranslatableString" key="Property.monitorEvents" bundleName="ComIbmR" pluginId="RNodeToolkit"/>
+                          </propertyDescriptor>
+                        </propertyDescriptor>
+                      </propertyDescriptor>
+                    </propertyDescriptor>
+                  </propertyDescriptor>
+                </propertyDescriptor>
+              </propertyDescriptor>
+            </propertyDescriptor>
+          </propertyDescriptor>
+        </propertyDescriptor>
+      </propertyDescriptor>
+    </propertyOrganizer>
+  </eClassifiers>
+</ecore:EPackage>

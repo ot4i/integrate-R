@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="RNodeRuntime" default="all">
+	<target name="all">
+		<property name="version" value="1.0.0" />
+		<tstamp>
+			<format property="timestamp" pattern="YYYYMMdd-HHmm" />
+		</tstamp>
+		<jar destfile="../RNode/RNodeRuntime-${version}.${timestamp}.par">
+			<zipfileset prefix="classes" dir="bin" includes="**/*.class" />
+			<zipfileset prefix="lib" dir="." includes="*.jar" />
+			<manifest>
+				<attribute name="Implementation-Title" value="R node for IBM Integration Bus" />
+				<attribute name="Implementation-Version" value="${timestamp}" />
+				<attribute name="Implementation-Vendor" value="IBM Corporation" />
+			</manifest>
+		</jar>
+	</target>
+</project>

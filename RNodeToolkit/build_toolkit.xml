@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="RNodeToolkit" default="all">
+	<target name="all">
+		<property name="version" value="1.0.0" />
+		<tstamp>
+			<format property="timestamp" pattern="YYYYMMdd-HHmm" />
+		</tstamp>
+		<pde.exportPlugins destination="../RNode" exportSource="false" exportType="zip" filename="RNodeToolkit-${version}.${timestamp}.zip" plugins="RNodeToolkit" qualifier="${timestamp}" useJARFormat="true" />
+	</target>
+</project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <!--This is a generated file.-->
+    <!--User modifications to this section will not be preserved.-->
+    <extension point="org.eclipse.help.contexts">
+        <contexts file="HelpContexts.xml"/>
+    </extension>
+   <extension
+         point="com.ibm.etools.mft.uri.pluginspace">
+        <directory>
+            <file encoding="ISO-8859-1" name="ComIbmR.msgnode"/>
+            <file encoding="ISO-8859-1" name="ComIbmR.properties"/>
+        </directory>
+   </extension>
+    <!--This is a generated file.-->
+    <!--User modifications to this section will not be preserved.-->
+    <extension point="com.ibm.etools.mft.api.nodes"/>
+</plugin>

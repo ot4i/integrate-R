@@ -6,6 +6,6 @@
 	<classpathentry kind="lib" path="RserveEngine.jar"/>
 	<classpathentry kind="lib" path="commons-pool2-2.2.jar"/>
 	<classpathentry kind="lib" path="commons-collections4-4.0.jar"/>
-	<classpathentry kind="var" path="MQSI_HOME/classes/jplugin2.jar"/>
+	<classpathentry kind="var" path="MQSI_HOME/server/classes/jplugin2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

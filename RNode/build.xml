@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="RNode" default="all">
 	<target name="all">
+		<property name="version" value="1.0.0" />
 		<tstamp>
-	    	<format property="timestamp" pattern="1.0.0.YYYYMMdd-HHmm"/>
+			<format property="timestamp" pattern="YYYYMMdd-HHmm" />
 		</tstamp>
-		<echoxml file="bin/extension.xml" namespacepolicy="all">
-			<extension xmlns="http://com.ibm.iib">
-				<name>ibm-iib-r-node</name>
-				<description>R node for IBM Integration Bus</description>
-				<version>${timestamp}</version>
-			</extension>
-		</echoxml>
-		<jar destfile="bin/RNode.par">
-			<zipfileset prefix="classes" dir="bin" includes="**/*.class"/>
-			<zipfileset prefix="lib" dir="." includes="*.jar"/>
-		</jar>
-		<fixcrlf srcdir="." destdir="bin" includes="RNode.sh,postinstall.sh" eol="lf"/>
-		<fixcrlf srcdir="." destdir="bin" includes="RNode.cmd,postinstall.cmd" eol="crlf"/>
-		<jar destfile="bin/ibm-iib-r-node.iibext">
-			<zipfileset prefix="lil" dir="bin" includes="RNode.par"/>
-			<zipfileset prefix="samples" dir="bin" includes="RNode.cmd,RNode.sh"/>
-			<metainf dir="bin" includes="extension.xml"/>
-			<metainf dir="bin" includes="postinstall.cmd,postinstall.sh"/>
-		</jar>
+		<subant inheritall="true">
+			<fileset dir="..">
+				<include name="RNodeRuntime/build_runtime.xml" />
+				<include name="RNodeToolkit/build_toolkit.xml" />
+			</fileset>
+		</subant>
 	</target>
 </project>
