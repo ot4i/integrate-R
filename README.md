@@ -14,13 +14,13 @@ Note that the R runtime and Rserve server may not be available for the system on
 
 ##Setup
 1. Install the R node runtime component into IBM Integration Bus. 
-  * You can download a prebuilt binary from the [RNode](RNode) project. The file is named *RNodeRuntime-\<version\>.par*.
+  * You can download a prebuilt binary from the [RNode](RNode) project. The file is named *RNodeRuntime-\<version\>.par*. The latest version of the file is [RNodeRuntime-1.0.0.20150417-1641.par](RNode/RNodeRuntime-1.0.0.20150417-1641.par?raw=true).
   * Alternatively, you can download and build the source in the [RNodeRuntime](RNodeRuntime) project.
   * Copy the *RNodeRuntime-\<version\>.par* file into the IBM Integration Bus installation. The file should be copied into *\<install root\>\server\bin* on Windows systems, and *\<install root\>\server\lil* on all other systems.
   * Once the file has been copied, then you must restart all integration servers that you will be deploying the R node to.
 
 2. Install the R node toolkit component into IBM Integration Bus.
-  * You can download a prebuilt archive from the [RNode](RNode) project. The file is named *RNodeToolkit-\<version\>.zip*.
+  * You can download a prebuilt archive from the [RNode](RNode) project. The file is named *RNodeToolkit-\<version\>.zip*. The latest version of the file is [RNodeToolkit-1.0.0.20150417-1641.zip](RNode/RNodeToolkit-1.0.0.20150417-1641.zip?raw=true).
   * Alternatively, you can download and build the source in the [RNodeToolkit](RNodeToolkit) project.
   * Extract the *RNodeToolkit-\<version\>.zip* file into the IBM Integration Bus installation. The file should be extracted into *\<install root\>\tools*, and the extract process should create a file named *\<install root\>\tools\plugins\RNodeToolkit-\<version\>.jar*.
   * Once the file has been extracted, then you must restart the Integration Toolkit.
