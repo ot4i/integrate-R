@@ -16,7 +16,7 @@ Note that the R runtime and Rserve server may not be available for the system on
 1. Install the R node runtime component into IBM Integration Bus. 
   * You can download a prebuilt binary from the [RNode](RNode) project. The file is named *RNodeRuntime-\<version\>.par*.
   * Alternatively, you can download and build the source in the [RNodeRuntime](RNodeRuntime) project.
-  * Copy the *RNodeRuntime-\<version\>.par* file into the IBM Integration Bus installation. The file should be copied into *\<install root\>\server\lil*.
+  * Copy the *RNodeRuntime-\<version\>.par* file into the IBM Integration Bus installation. The file should be copied into *\<install root\>\server\bin* on Windows systems, and *\<install root\>\server\lil* on all other systems.
   * Once the file has been copied, then you must restart all integration servers that you will be deploying the R node to.
 
 2. Install the R node toolkit component into IBM Integration Bus.
